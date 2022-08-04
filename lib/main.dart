@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:appone/circular_avatar.dart';
+import 'package:appone/home_page.dart';
 import 'package:appone/stack_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // home: HomePage(),
-      // home: StackExample(),
-      home: LoginForm(),
-    );
+        debugShowCheckedModeBanner: false,
+        // home: HomePage(),
+        // home: StackExample(),
+        home: HomePageMenu());
   }
 }
 

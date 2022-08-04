@@ -3,7 +3,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class ViewTodo extends StatefulWidget {
-  const ViewTodo({Key? key}) : super(key: key);
+  final List<Map> notes;
+
+  const ViewTodo({Key? key, required this.notes}) : super(key: key);
 
   @override
   State<ViewTodo> createState() => _ViewTodoState();
@@ -18,7 +20,7 @@ class _ViewTodoState extends State<ViewTodo> {
       ),
       body: ListView(
         children: List.generate(
-          4,
+          widget.notes.length,
           (index) => Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
@@ -32,8 +34,11 @@ class _ViewTodoState extends State<ViewTodo> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                        alignment: Alignment.bottomLeft, child: Text("title")),
-                    Align(alignment: Alignment.bottomLeft, child: Text("body"))
+                        alignment: Alignment.bottomLeft,
+                        child: Text(widget.notes[index]["title"])),
+                    Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Text(widget.notes[index]["body"]))
                   ],
                 ),
               ),

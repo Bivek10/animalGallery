@@ -11,6 +11,10 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  TextEditingController titleTextCtrl = TextEditingController();
+  TextEditingController bodyTextCtrl = TextEditingController();
+  List<Map> notes = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +26,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ViewTodo(),
+                    builder: (context) => ViewTodo(
+                      notes: notes,
+                    ),
                   ),
                 );
               },
@@ -38,6 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
           child: ListView(
             children: [
               TextFormField(
+                controller: titleTextCtrl,
                 decoration: InputDecoration(
                   hintText: "Title",
                   border: InputBorder.none,
@@ -62,6 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: 10,
               ),
               TextFormField(
+                controller: bodyTextCtrl,
                 maxLines: 5,
                 decoration: InputDecoration(
                   hintText: "Body",
@@ -87,7 +95,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: 10,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Map singleNote = {
+                    "title": titleTextCtrl.text,
+                    "body": bodyTextCtrl.text
+                  };
+
+                  notes.add(singleNote);
+                },
                 child: Text("Save"),
               )
             ],
