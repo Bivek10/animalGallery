@@ -9,6 +9,14 @@ class InkWellExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.chevron_left,
+            )),
         title: Text('InkWell example'),
       ),
       body: Center(

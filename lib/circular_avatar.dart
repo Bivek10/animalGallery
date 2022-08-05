@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class CircularAvatars extends StatelessWidget {
-  const CircularAvatars({Key? key}) : super(key: key);
+class CircularAvatars1 extends StatelessWidget {
+  const CircularAvatars1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

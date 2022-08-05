@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class AddNote extends StatefulWidget {
+  const AddNote({Key? key}) : super(key: key);
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<AddNote> createState() => _AddNoteState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _AddNoteState extends State<AddNote> {
   TextEditingController titleTextCtrl = TextEditingController();
   TextEditingController bodyTextCtrl = TextEditingController();
   List<Map> notes = [];

@@ -70,7 +70,7 @@ class _LoginFormState extends State<LoginForm> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfilePage(),
+                    builder: (context) => AddNote(),
                   ),
                 );
               },
