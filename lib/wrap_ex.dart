@@ -22,50 +22,60 @@ class WrapExample extends StatelessWidget {
         // verticalDirection: VerticalDirection.up,
         children: <Widget>[
           Container(
-              color: Colors.blue,
-              width: 100,
-              height: 100,
-              child: Center(
-                  child: Text(
+            color: Colors.blue,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
                 "W1",
                 textScaleFactor: 2.5,
-              ))),
+              ),
+            ),
+          ),
           Container(
-              color: Colors.red,
-              width: 100,
-              height: 100,
-              child: Center(
-                  child: Text(
+            color: Colors.red,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
                 "W2",
                 textScaleFactor: 2.5,
-              ))),
+              ),
+            ),
+          ),
           Container(
-              color: Colors.teal,
-              width: 100,
-              height: 100,
-              child: Center(
-                  child: Text(
+            color: Colors.teal,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
                 "W3",
                 textScaleFactor: 2.5,
-              ))),
+              ),
+            ),
+          ),
           Container(
-              color: Colors.indigo,
-              width: 100,
-              height: 100,
-              child: Center(
-                  child: Text(
+            color: Colors.indigo,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
                 "W4",
                 textScaleFactor: 2.5,
-              ))),
+              ),
+            ),
+          ),
           Container(
-              color: Colors.orange,
-              width: 100,
-              height: 100,
-              child: Center(
-                  child: Text(
+            color: Colors.orange,
+            width: 100,
+            height: 100,
+            child: Center(
+              child: Text(
                 "W5",
                 textScaleFactor: 2.5,
-              ))),
+              ),
+            ),
+          ),
         ],
       ),
     );

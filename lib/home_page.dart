@@ -1,5 +1,7 @@
 import 'package:appone/bottom_navigator.dart';
 import 'package:appone/ink_well_ex.dart';
+import 'package:appone/list_view_ex.dart';
+import 'package:appone/row_widget.dart';
 import 'package:appone/stack_widget.dart';
 import 'package:appone/wrap_ex.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ import 'package:flutter/src/widgets/ticker_provider.dart';
 import 'add_todo.dart';
 import 'chip_widget.dart';
 import 'circle_avtar.dart';
+import 'column_ex.dart';
 import 'gesture_dectector_ex.dart';
 
 class HomePageMenu extends StatefulWidget {
@@ -154,7 +157,49 @@ class _HomePageMenuState extends State<HomePageMenu>
                 );
               },
               child: Text("Wrap Example"),
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ColumnExample(),
+                  ),
+                );
+              },
+              child: Text("Column Example"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RowExample(),
+                  ),
+                );
+              },
+              child: Text("Row Example"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListViewExample(),
+                  ),
+                );
+              },
+              child: Text("ListView Example"),
+            ),
           ],
         ),
       ),
