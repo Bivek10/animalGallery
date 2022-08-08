@@ -30,7 +30,7 @@ class ChipWidget extends StatelessWidget {
           ),
           onDeleted: () {},
           label: Text(
-            "1",
+            "1s",
             style: TextStyle(
               color: Colors.white,
             ),

@@ -1,11 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class ListViewExample extends StatelessWidget {
-  ListViewExample({Key? key}) : super(key: key);
+class GridViewExample extends StatelessWidget {
+  GridViewExample({Key? key}) : super(key: key);
 
   List<Color> colors = [Colors.red, Colors.green, Colors.blue, Colors.yellow];
 
@@ -13,13 +11,14 @@ class ListViewExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ListView Example..."),
+        title: Text("GridView Example..."),
       ),
       body: Container(
-        child: ListView(
-            physics: BouncingScrollPhysics(),
+        child: GridView.count(
             //crossAxisAlignment: CrossAxisAlignment.end,
-            scrollDirection: Axis.vertical,
+            crossAxisCount: 4,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
             children: List.generate(100, (index) {
               Color currentColor = colors[Random().nextInt(colors.length)];
               return Padding(

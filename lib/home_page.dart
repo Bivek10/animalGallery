@@ -1,6 +1,8 @@
 import 'package:appone/bottom_navigator.dart';
+import 'package:appone/grid_view.dart';
 import 'package:appone/ink_well_ex.dart';
 import 'package:appone/list_view_ex.dart';
+import 'package:appone/page_view.dart';
 import 'package:appone/row_widget.dart';
 import 'package:appone/stack_widget.dart';
 import 'package:appone/wrap_ex.dart';
@@ -14,6 +16,7 @@ import 'add_todo.dart';
 import 'chip_widget.dart';
 import 'circle_avtar.dart';
 import 'column_ex.dart';
+import 'future_builder.dart';
 import 'gesture_dectector_ex.dart';
 
 class HomePageMenu extends StatefulWidget {
@@ -199,6 +202,48 @@ class _HomePageMenuState extends State<HomePageMenu>
                 );
               },
               child: Text("ListView Example"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GridViewExample(),
+                  ),
+                );
+              },
+              child: Text("GridView Example"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PageViewExample(),
+                  ),
+                );
+              },
+              child: Text("PageView Example"),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FutureBuilderEx(),
+                  ),
+                );
+              },
+              child: Text("Future Example"),
             ),
           ],
         ),
