@@ -1,4 +1,5 @@
 import 'package:appone/view_todo.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -96,12 +97,23 @@ class _AddNoteState extends State<AddNote> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Map singleNote = {
+                  Map<String, dynamic> singleNote = {
                     "title": titleTextCtrl.text,
-                    "body": bodyTextCtrl.text
+                    "message": bodyTextCtrl.text
                   };
+                  var response = FirebaseFirestore.instance
+                      .collection("todolist")
+                      .add(singleNote);
 
-                  notes.add(singleNote);
+                  response.then((value) {
+                    if (value.id.isNotEmpty) {
+                      print("data is add and ref id is ${value.id}");
+                    } else {
+                      print("sorry! unable to save data");
+                    }
+                  });
+
+                  //  notes.add(singleNote);
                 },
                 child: Text("Save"),
               )

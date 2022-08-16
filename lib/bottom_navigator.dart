@@ -40,9 +40,10 @@ class _BottomNavExmpState extends State<BottomNavExmp> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Dashboard"),
         ],
         onTap: (value) {
-          print(value);
+          print("page index:$value");
           setState(() {
             pageindex = value;
+            print("value of set page index $pageindex");
           });
         },
       ),

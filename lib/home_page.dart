@@ -1,3 +1,4 @@
+import 'package:appone/3d_model.dart';
 import 'package:appone/bottom_navigator.dart';
 import 'package:appone/grid_view.dart';
 import 'package:appone/ink_well_ex.dart';
@@ -46,7 +47,30 @@ class _HomePageMenuState extends State<HomePageMenu>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Widgets Examples"),
+        flexibleSpace: FlexibleSpaceBar(
+          background: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.blue,
+                  Colors.orange,
+                ],
+              ),
+            ),
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.menu),
+        ),
+        centerTitle: false,
+        title: Text("Widget Examples"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notification_add),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
@@ -57,14 +81,25 @@ class _HomePageMenuState extends State<HomePageMenu>
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => InkWellExample(),
+                    builder: (context) => ThreeD(),
                   ),
                 );
               },
-              child: Text("Ink Well example"),
+              child: Text("3D-Example"),
             ),
             SizedBox(
               height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GestureDectExmp(),
+                  ),
+                );
+              },
+              child: Text("Text Button exmple"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -248,6 +283,20 @@ class _HomePageMenuState extends State<HomePageMenu>
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange,
+        onPressed: () {},
+        child: Icon(Icons.qr_code),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+          child: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "pay now"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+        ],
+      )),
     );
   }
 }
