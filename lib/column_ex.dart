@@ -19,9 +19,8 @@ class ColumnExample extends StatelessWidget {
             //crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             //crossAxisAlignment: CrossAxisAlignment.end,
-            children: List.generate(
-              10,
-              (index) => Padding(
+            children: List.generate(10, (index) {
+              return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
@@ -31,8 +30,8 @@ class ColumnExample extends StatelessWidget {
                     child: Text("index: $index "),
                   ),
                 ),
-              ),
-            ),
+              );
+            }),
           ),
         ),
       ),

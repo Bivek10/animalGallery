@@ -10,17 +10,22 @@ class CircleAvtar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Circle Avatar example"),
+        title: Text(
+          "Circle Avatar example",
+          style: TextStyle(
+            color: Colors.red,
+          ),
+        ),
       ),
       body: Center(
           child: Material(
         shadowColor: Colors.grey.shade200,
-        elevation: 10,
+        elevation: 50,
         borderRadius: BorderRadius.circular(70),
         child: CircleAvatar(
           backgroundColor: Colors.yellow,
           radius: 70,
-          // backgroundImage: AssetImage("assets/images/elep.jpeg"),
+          backgroundImage: AssetImage("assets/images/elep.jpeg"),
         ),
       )),
     );

@@ -13,7 +13,7 @@ class ChipWidget extends StatelessWidget {
       ),
       body: Center(
         child: Chip(
-          backgroundColor: Colors.purple,
+          backgroundColor: Color.fromARGB(255, 176, 53, 39),
           avatar: CircleAvatar(
             backgroundColor: Colors.green,
             radius: 15,
